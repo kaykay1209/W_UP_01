@@ -31,6 +31,7 @@ $H_A$: The average number of pushups done by line players is statistically diffe
 
 <!--Decide on your methods: use "variable analysis" or other appropriate descriptors. Make sure to choose at least one graphical method and at least one numerical method.!-->
 
+because numerical is explained by categorical means that the T test was used. 
 # Results
 
 <!--Divide this section into two sub-sections: One for your descriptive results and one for your inferential results.!-->
@@ -54,6 +55,8 @@ this plot shows that the skill players tend to do more pushups in 2 minuets than
 
 
 # Discussion and Conclusion
+```{r}
+favstats(pushups~position,data=mydata)
+```
 
-<!--Discussion and conclusion here. If you found a relationship be sure to consider whether the relationship occurs because one of the variavbles causes the other, or whether they perhasps are related for some other reason. Watch the chapter 6 videos from the GeorgeTown videos collection.!-->
-
+the skilled players have done more push ups then the line players the skilled player can do an average of 49 push ups and the line player did an average of 17 push ups.
