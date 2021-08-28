@@ -31,7 +31,7 @@ $H_A$: The average number of pushups done by line players is statistically diffe
 
 <!--Decide on your methods: use "variable analysis" or other appropriate descriptors. Make sure to choose at least one graphical method and at least one numerical method.!-->
 
-because numerical is explained by categorical means that the T test was used. 
+Because the explanatory variable is categorical and the response variable is numerical we are going to use a T test for inference. 
 # Results
 
 <!--Divide this section into two sub-sections: One for your descriptive results and one for your inferential results.!-->
@@ -42,21 +42,40 @@ because numerical is explained by categorical means that the T test was used.
 
 <!--Graphical results here. Make sure to show your code. Provide appropriate labels for axes, giving units if possible, and provide a good title for the graph, too. Use the graphical results to describe the patterns if any that exist in the data as focused toward the research question!-->
 
-### Numerical Descriptive Results
+
 ```{r}
 boxplot(pushups~position,data=mydata)
 ```
 
-this plot shows that the skill players tend to do more pushups in 2 minuets than they do the line players. the bottom of the barrel in the skill box is above the top of the barrel for the line box. 
+
+this plot shows that the skill players can do more pushups in 2 minutes than the line players.The bottom of the barrel in the skill box is above all the top of the barrel for the line box. 
+
+
+### Numerical Descriptive Results
+
+
+
+```{r}
+favstats(pushups~position,data=mydata)
+```
+
+the skilled players have done more pushups than the line players. the skilled players can do an average of 49 push ups and the line player did an average of 17 push ups.
 
 ## Inferential Results
 
 <!--State hypothesis clearly. Make sure your discussion of the inferential test covers all the aspects that the test output produces, such as test statistic, p-value etc. Make a decision about the null hypothesis, explain the assumptions on which the selected test/procedure was based, and why the chosen procedure satisfys the assumptions and is appropriate to answer the research question!-->
 
-
-# Discussion and Conclusion
 ```{r}
-favstats(pushups~position,data=mydata)
+t.test(pushups~position,data=mydata)
 ```
+the p value is 0.000009421 therefore i reject the null hypothesis. I am inferring there is a difference between the skilled and line position players in push ups that can be done in two minutes.
 
-the skilled players have done more push ups then the line players the skilled player can do an average of 49 push ups and the line player did an average of 17 push ups.
+
+
+# discussion and conclusion
+
+
+
+the original question of skilled players or line players and how many pushups that can be done in two minutes.the conclusion is that there is a difference between the players. the skilled players on average could do more push ups than the line position players.
+
+
